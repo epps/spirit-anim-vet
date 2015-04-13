@@ -1,0 +1,345 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Rancho);
+
+body {
+	font-family: "Droid Sans Mono", sans-serif;
+	font-size: 1.5em;
+	position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Rancho", cursive;
+	margin: 0;
+}
+
+/* Header Navigation */
+header .navbar {
+	padding: 30px 0;
+	border: none;
+	transition: all .5s ease;
+} 
+
+header .navbar-default {
+	background-color: transparent;
+} 
+
+header .navbar-default .navbar-nav a {
+	color: #00BF00;
+	padding: 5px 8px;
+}
+
+header .navbar-default .navbar-nav a:hover {
+	color: #EF0000;
+}
+
+header .navbar-default .navbar-nav .active a {
+	color: #EF0000;
+	background: transparent;
+	border-bottom: 4px solid #EF0000;
+	text-shadow: none;
+}
+
+header .navbar-default .navbar-nav .active a:hover, header .navbar-default .navbar-nav .active a:focus {
+	color: #EF0000;
+	background: transparent;
+	border-bottom: 4px solid #EF0000;
+}
+
+/*Navbar Brand*/
+header .navbar-brand{
+	background: url(../images/svg/veterinarian.svg);
+	background-repeat: no-repeat;
+	background-position: 15px 0;
+	height: auto;
+}
+
+header .navbar-brand span.subhead {
+	font-size: .75em;
+	display: block;
+	padding-left: 30px;
+}
+
+a.navbar-brand h1 {
+	font-family: "Rancho", cursive;
+	font-size: 1.8em;
+	margin: 0;
+	padding-left: 105px;
+}
+
+header .navbar-default .navbar-brand {
+	color: #32E432;
+}
+
+ header .navbar-default .navbar-brand:hover {
+	color: #EF0000;
+}
+
+/*Navbar Toggle*/
+header .navbar-toggle {
+	background-color: #EF0000;
+}
+
+header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus {
+	background-color: #EF0000;
+}
+
+header .navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+@media only screen
+and (max-width: 768px) {
+	header .navbar-collapse.in {
+		background-color: rgba(0, 0, 0, .5);
+	}	
+}
+
+/* Nav inbody */
+header .inbody {
+	background: rgba(231, 105, 0, .9);
+}
+
+header .navbar.inbody {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+header .navbar.inbody .navbar-nav {
+	padding-top: 10px;
+}
+
+header .inbody .navbar-brand {
+	background-size: 43px;
+	background-position: top left;
+	margin-top: 5px;
+	margin-left: 10px;
+	padding-bottom: 5px;
+}
+
+header .inbody .navbar-brand h1 {
+	font-size: 1.6em;
+	padding-left: 38px;
+}
+
+header .inbody .navbar-brand span.subhead {
+	display: none;
+}
+
+/* Carousel Fade */
+.carousel.fade {
+	opacity: 1;
+}
+
+.carousel.fade .item {
+	transition: opacity ease-out .7s;
+	left: 0;
+	opacity: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: block;
+} /* essentially clears out all carousels by setting their opacity to 0 */
+
+.carousel.fade .item:first-child {
+	top: auto;
+	opacity: 1;
+	position: relative;
+}
+
+.carousel.fade .item.active {
+	opacity: 1;
+}
+
+.carousel-control {
+	opacity: 0;
+}
+
+.carousel-control.right, .carousel-control.left {
+	background-image: none;
+}
+
+#featured .item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+}
+
+/* Pages */
+.page {
+	padding: 50px 0;
+} /*This padding ensures the headers won't get lost behind the navbar*/ 
+
+.page h2 {
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+/* Page Mission */
+#mission {
+	background-color: #00BF00;
+	background-image: linear-gradient(to bottom, #28CD28, #007600);
+}
+
+/* Services Page */
+.service {
+	margin: 20px 0;
+	text-align: center;
+}
+
+#services img.icon {
+	/*transition: height .5s ease;*/
+	margin: 20px 0;
+	height: 120px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+/*#services img.icon:hover {
+	height: 125px;
+	margin-bottom: 0;
+}*/
+
+#services h3 {
+	margin-bottom: 10px;
+}
+
+@media only screen 
+and (min-width: 450px)
+and (max-width: 768px) {
+	.service p {
+		padding: 0 20%;
+	}
+}
+
+/* Staff Page */
+#staff {
+	background-color: #5072BB;
+	background-image: linear-gradient(to bottom, #A5BCE8, #3058AD);
+}
+
+.doctor {
+	margin: 10px 0;
+}
+
+.doctor h3 {
+	font-size: 2em;
+	color: #072463;
+	padding-bottom: 5px;
+}
+
+.doctor p {
+	font-size: .8em;
+}
+
+.doctor img {
+	border-radius: 50%;
+	width: 100%;
+}
+
+/* Testimonials Page */
+#testimonials {
+	padding: 0;
+}
+
+#testimonials h2 {
+	display: none;
+}
+
+#testimonials blockquote {
+	margin: 0;
+	padding: 0;
+	border-left: none;
+	min-height: 500px;
+	position: relative; 
+}
+
+#testimonials blockquote .quote {
+	background-color: rgba(255, 255, 255, .6);
+	padding: 20px 5%; /*if a percentage is used to specify padding, the padding will be a percentage of the browser window or of the containing box*/
+	position: absolute;
+	bottom: 0;
+	width: 75%;
+	border-radius: 0 50px 0 0; 
+}
+
+#testimonials blockquote .quote:hover {
+	background-color: rgba(255, 185, 49, .7); 
+}
+
+#john {
+	background: url(../images/jellyfish.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#frank {
+	background: url(../images/chameleon.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#manfields {
+	background: url(../images/seagulls.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#shirly {
+	background: url(../images/ostrich.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#testimonials .quote {
+	font-size: 1.2em;
+	line-height: 110%;
+}
+
+#testimonials .quote .more, #testimonials .customer {
+	opacity: 0;
+	font-size: 0;
+	line-height: 0;
+	padding-top: 10px;
+}
+
+#testimonials .quote:hover .more {
+	display: block;
+	opacity: 1;
+	font-size: .8em;
+	line-height: 120%;
+}
+
+#testimonials .quote .intro::after {
+	content: " ...";
+}
+
+#testimonials .quote:hover .intro::after {
+	content: "";
+}
+
+/* Footer */
+footer {
+	background: #BE0000;
+	color: white;
+	font-size: .8em;
+	padding: 20px 0 40px 0;
+}
+
+footer .navbar-default {
+	background: transparent;
+	border: 0;
+}
+
+footer a {
+	color: #FF5D5D !important;
+}
+
+footer a:hover {
+	color: #EF9E00 !important;
+	text-decoration: none;
+}
+
+footer .phone {
+	font-size: 1.5em;
+	color: #4ED64E;
+}
+
+
+
